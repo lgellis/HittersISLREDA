@@ -1,4 +1,4 @@
-# HittersISLREDA
+# Hitters ISLR EDA
 
 This EDA was created in R using the hitters data set from the ISLR package
 
