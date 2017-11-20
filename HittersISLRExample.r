@@ -56,24 +56,24 @@ p + geom_bar()
 
 
 
-#2) stacked bar chart
+#Stacked bar chart
 qplot(Years, data=Hitters, fill=League)
 
 #Code Starting Point Credit: http://docs.ggplot2.org/dev/vignettes/qplot.html
 
-#3) Scatter plot with the colors coded.
+# Scatter plot with the colors coded.
 qplot(Salary, CRBI, data=Hitters, color=League)
 
 #Code Starting Point Credit: http://docs.ggplot2.org/dev/vignettes/qplot.html
 
 
 
-#6) Boxplot with mulitple factors and outliers highlighted
+#Boxplot with mulitple factors and outliers highlighted
 x <-ggplot(Hitters, aes(factor(League), Salary))
 x + geom_boxplot(aes(fill=factor(Division)), outlier.color="red", outlier.shape = "star", outlier.size=4)
 
 
-#4) Regression Lines
+#Regression Lines
 qplot(Salary, CRBI, data=Hitters, color=League, geom=c("point", "smooth"))
 
 #Code Starting Point Credit: http://docs.ggplot2.org/dev/vignettes/qplot.html
@@ -95,11 +95,11 @@ qplot(Years, data=Hitters, facets=League~.)
 #Code Starting Point Credit: https://www.youtube.com/watch?v=HeqHMM4ziXA
 
 
-#6) Boxplot with mulitple factors and outliers highlighted
+#Boxplot with mulitple factors and outliers highlighted
 x <-ggplot(Hitters, aes(factor(League), Salary))
 x + geom_boxplot(aes(fill=factor(Division)), outlier.color="red", outlier.shape = "star", outlier.size=4)
 
-#6) Boxplot with mulitple factors and outliers highlighted
+#Boxplot with mulitple factors and outliers highlighted
 x <-ggplot(Hitters, aes(factor(League), Salary))
 x + geom_boxplot(aes(fill=factor(Division)), outlier.color="red", outlier.shape = "star", outlier.size=4)
 
@@ -110,14 +110,14 @@ p + geom_violin(aes(fill = cyl))
 
 
 
-#7) Violin Plot
+#Violin Plot
 x <-ggplot(Hitters, aes(factor(League), Salary))
 x + geom_violin(aes(fill=factor(Division)))
 
 #Code Starting Point Credit: http://www.r-graph-gallery.com/95-violin-plot-with-ggplot2/
 
 
-#8) Stacked area graph
+#Stacked area graph
 
 
 
@@ -125,13 +125,13 @@ ggplot(Hitters, aes(CRBI, Salary, fill=League)) +   geom_area()
 
 #Code Starting Point Credit: https://www.youtube.com/watch?v=HeqHMM4ziXA
 
-#11) Levelplot
+#Levelplot
 
 ggplot(Hitters, aes(HmRun, Division, z= Years)) + geom_tile(aes(fill = Years)) + theme_bw() +   scale_fill_gradient(low="white", high="red") 
 
 #Code Starting Point Credit: http://www.r-graph-gallery.com/all-graphs/
 
-#12) More detailed Scatterplot Matrix
+#More detailed Scatterplot Matrix
 
 #subset to the first four years to make graph more readable
 Hitter4Yrs <- filter(Hitters, Hitters$Years<=4)
@@ -140,13 +140,13 @@ p <- qplot(Salary, CRBI, data=Hitter4Yrs, shape=Division, color=Division,
            facets=Years~League, main="Scatterplots of Salary vs CRBI",
            xlab="Salary", ylab="CRBI")
 
-#11) Levelplot
+#Levelplot
 
 ggplot(Hitters, aes(HmRun, Division, z= Years)) + geom_tile(aes(fill = Years)) + theme_bw() +   scale_fill_gradient(low="white", high="red") 
 
 #Code Starting Point Credit: http://www.r-graph-gallery.com/all-graphs/
 
-#12) More detailed Scatterplot Matrix
+#More detailed Scatterplot Matrix
 
 #subset to the first four years to make graph more readable
 Hitter4Yrs <- filter(Hitters, Hitters$Years<=4)
